@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320px" height="320px" viewBox="0 0 320 320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>favicon@1x</title>
+    <g id="favicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="320" height="320" rx="40"></rect>
+        <g id="Logo" transform="translate(27.000000, 28.000000)">
+            <g id="Sun" transform="translate(16.000000, 23.595272)">
+                <ellipse id="Oval" fill="#B8E5E9" opacity="0.600000024" cx="114" cy="114.200604" rx="114" ry="114.200604"></ellipse>
+                <ellipse id="Oval" fill="#CCEB85" cx="132" cy="102.179488" rx="92" ry="92.161891"></ellipse>
+                <ellipse id="Oval" fill="#FFE980" cx="147" cy="83.1460539" rx="69" ry="69.1214183"></ellipse>
+            </g>
+            <g id="Bird">
+                <path d="M172.80458,132.316243 L202,99.7290085 L268,88.1833036 C248.057707,86.9608172 227.504935,85.7383309 206.341686,84.5158445 C194.650729,69.6414641 180.487634,62.2042739 163.852402,62.2042739 C147.21717,62.2042739 131.933999,75.456074 118.00289,101.959674" id="Shape" stroke="#0B4172" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M82.851965,157.808034 C73.9268752,177.780996 66.3095536,192.48115 60,201.908496 C52.3009681,213.411916 36.6343014,230.77575 13,254 C43.6581463,235.097872 76.6787052,224.857913 99.201793,216.618918 C135.180499,203.457826 155.620527,181.939445 155.620527,157.808034 C155.620527,135.016533 145,113.753644 114,101.732528 C52.5255047,77.8940745 27.4715262,53.3424414 0,35.6163886 C17.0933941,66.7897917 16.1214108,116.890884 49.9009121,137.627353 C64.9140238,146.843561 83.0776529,157.664408 104.3918,170.089892" id="Path" stroke="#0B4172" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M120.788286,60.2034522 C87.4998502,42.6956268 68.5201823,25.8847259 48.2254437,12.7905563 C58.7225704,31.903119 62.4319434,58.1227412 71.5214519,80.3333931" id="Path" stroke="#0B4172" stroke-width="17" stroke-linecap="round" stroke-linejoin="round" transform="translate(84.506865, 46.561975) rotate(27.000000) translate(-84.506865, -46.561975) "></path>
+                <circle id="Oval-2" fill="#0B4172" cx="168" cy="92" r="10"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
