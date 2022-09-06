@@ -51,14 +51,11 @@
 	<style>
 		/* color variables */
 		:root {
-			/* used for the type */
-			--darkBlue: #24567b;
-			--red: #eb5b6a;
-			/* background colors */
+			--darkBlue: #1c6f91;
+			--darkestBlue: #368bad;
 			--paper: #fff8f1;
-			--green: #ebf2d5;
-			--orange: #fbe4c9;
-			--blue: #e2effb;
+			--white: #fff;
+			--black: #000;
 		}	
 
 		/* base styles */
@@ -68,16 +65,19 @@
 		footer {padding:0 20px;}
 		h1, h2, h3, h4, nav span {font-family: 'Playfair Display', 'Georgia', serif;}
 		h1 {font-size:4em; margin:0.3em 0; padding:0;}
-		h2	{font-size:2.5em;}
+		h2	{font-size:2.5em; font-style: italic;}
 		h3	{font-size:2em;}
 		a {color:#000; text-decoration: none; border-bottom:1px solid rgba(0, 0, 0, 0.2); transition: all .2s ease-in-out;}
-			a.white {color:rgba(255, 255, 255, 0.8); border-bottom-color:rgba(255, 255, 255, 0.3);}
+			a.white {color: var(--white); border-bottom-color:rgba(255, 255, 255, 0.3);}
 		a:hover {border-bottom:1px solid rgba(0, 0, 0, 0.9);}
 			a.white:hover {border-bottom-color:rgba(255, 255, 255, 0.9);}
 		hr {height: 1px; border: none; border-top: 1px solid #000; width: 100px; margin: 35px auto; display: inline-block;}
 
-		.button {padding:15px 20px; background-color: #1c6f91; color: #fff; border-radius: 8px; font-weight: bold; font-size: 1em; border: none; display: inline-block;}
-			.button:hover {background-color: #368bad; border: none;}
+		.button {padding:15px 20px; background-color: var(--darkBlue); color: var(--white); border-radius: 8px; font-weight: bold; font-size: 1em; border: none; display: inline-block;}
+			.button:hover {background-color: var(--darkestBlue); border: none;}
+			.button.outline {background-color:transparent; border: 1px solid var(--white)}
+			.button.white {background-color: var(--white); color: var(--black);}
+			.button.white:hover {opacity: 0.8;}
 
 		/* detailed styles */
 		.intro {font-size:23px; font-family: 'Newsreader', serif, 'Georgia'; text-align:center;}
@@ -90,7 +90,8 @@
 		.inset {max-width:950px;}
 		.inset-wide {max-width:1200px;}
 		.inset-narrow {max-width:700px;}
-		.flex {display: flex; flex-direction: row; width:100%;}
+		.flex {display: flex; flex-wrap: wrap; width:100%;}
+		.w-25 {width:25%; box-sizing: border-box; position:relative;}
 		.w-33 {width:33.33%; box-sizing: border-box; position:relative;}
 		.w-40 {width:40%; box-sizing: border-box; position:relative;}
 		.w-50 {width:50%; box-sizing: border-box; position:relative;}
@@ -107,28 +108,38 @@
 		nav span {position: absolute; font-size:20px; top:14px; left:60px; font-weight:bold;}
 
 		/* header */
-		/* #masthead {padding:0; position:relative; } */
-		#masthead-title {color:#fff; position:absolute; width:400px; right:10%; top:30%; transform: translateY(-30%); box-sizing: border-box; z-index: 1;}
-		#masthead-photo {position: relative;}
-			#masthead-photo img {width:100%;}
-		#masthead-intro {position: relative; margin-top:50px;}
-		#masthead-intro p {line-height:1.8em;}
-
+		#masthead {margin-top: 20px;}
+		#masthead-title {text-align: center; display: flex; flex-direction: column; justify-content: center; padding: 0 20px;}
+			#masthead-title img {margin:0 auto;}	
+			#masthead-title h2 {margin-top:0.5em; margin-bottom:0.5em;}
+			#masthead-title p {margin:0;}
+			#masthead-title hr {margin-top: 0;}
+		#masthead-photo picture img {width:100%;}
 
 		/* footer */
-		footer {background-color: rgb(25, 25, 25); color: #fff; padding:40px 0;}
-		footer a {color: #fff;}
-		footer.inset {text-align:center; margin-top: 50px; margin-bottom: 50px; opacity:0.7;}
-		footer:hover {opacity:1;}
+		footer {background-color: var(--black); color: var(--white); padding:40px 0;}
+		footer b {font-weight: normal; opacity: 0.7;}
+		footer ul {padding-left: 0;}
+		footer li {list-style-type: none;}
+		footer .button {margin:4px 0; padding:6px 20px;}
 
 
 		/* mobile device breakpoints */
 		@media screen and (max-width:1024px){
-
+			h1 {font-size: 3em;}
+			h2 {font-size: 2em;}
 		} 
+		@media screen and (max-width:840px){
+			h1 {font-size: 2.5em;}
+		}
 		@media screen and (max-width: 768px) {
-			.flex {flex-direction: column;}
+			.inset, .inset-wide, .inset-narrow {padding:0 20px;}
+			/* .flex {flex-direction: column;} */
 			.w-33, .w-50, .w-40, .w-60 {width:100%;}
+			.w-25 {width:50%;}
+			h1 {font-size: 3.5em;}
+
+			#masthead-title {margin-bottom: 50px;}
 		}
 		@media screen and (max-width: 640px){
 			
@@ -138,32 +149,33 @@
 		}
 		@media screen and (max-width: 375px) {
 			/* phones */
+			.w-25 {width:100%;}
 		}
 	</style>
-	</head>
-	<body>
+</head>
+<body>
 
-	<section id="masthead" class="flex inset-wide" style="margin-top: 20px;">
-		<div class="w-50" style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
-			<div style="padding: 0 50px;">
-				<img src="images/logo.png" width="90" alt="In Mijn Humm Logo, Kolibrie, Hummingbird">
-				<h2>In Mijn Humm</h2>
-				<p style="margin-bottom:0;">Drs. GZ-Psycholoog</p>
-				<h1 style="margin-top: 0;"><i>Natascha Hauser Middelberg</i></h1>
-				<hr style="margin-top: 0;">
-				<div>
-					<a href="/aanmelden" class="button" >Meld je aan</a>
-				</div>
+	<!-- header -->
+	<section id="masthead" class="flex inset-wide">
+		<div class="w-50" id="masthead-title">
+			<img src="images/logo.png" width="120" alt="In Mijn Humm Logo, Kolibrie, Hummingbird">
+			<h2>In Mijn Humm</h2>
+			<p>Vrijgevestigd GZ-Psycholoog</p>
+			<h1>Natascha Hauser Middelberg</h1>
+			<hr>
+			<div>
+				<a href="mailto:natascha@inmijnhumm.nl?subject=Aanmelding via website" class="button" >Meld je vandaag aan</a>
 			</div>
 		</div>
-		<div class="w-50">
+		<div class="w-50" id="masthead-photo">
 			<picture>
 				<source srcset="images/portret-sized.webp" type="image/webp">
-				<img src="images/portret-sized.jpg" style="width:100%;" alt="Portret van Natascha Hauser Middelberg">
+				<img src="images/portret-sized.jpg" alt="Portret van Natascha Hauser Middelberg">
 			</picture>
 		</div>
 	</section>
 
+	<!-- welcome -->
 	<section id="welkom" class="flex inset-wide" style="margin-top: 60px;">
 		<div class="w-50">
 			<picture>
@@ -251,8 +263,49 @@
 
 
 	<footer>
-		<div class="inset">
-			<span>©  2019 - <span id="fyear">2021</span> <a href="http://www.jasperhauser.nl" target="_blank" rel="noopener">Jasper Hauser</a> en <a href="http://www.loekbuter.com" target="_blank" rel="noopener">Loek Buter</a> — Algemeen contact via <a href="mailto:info@devuurtorenrond.nl?subject=De%20Vuurtoren%20Rond">info@devuurtorenrond.nl</a></span>
+		<div class="inset-wide flex">
+
+			<div class="w-25">
+				<b>Informatie</b>
+				<ul>
+					<li>BIG registratie: <a href="https://zoeken.bigregister.nl/bignummer/69915509225" class="white">69915509225</a></li>
+					<li>AGB persoonlijk: <a href="https://www.vektis.nl/agb-register/zorgverlener-94103477" class="white">94103477</a></li>
+					<li>AGB praktijk: <a href="https://www.vektis.nl/agb-register/onderneming-94066642" class="white">94066642</a></li>
+					<li>KvK nummer: <a href="https://www.kvk.nl/orderstraat/product-kiezen/?kvknummer=820640080000" class="white">82064008</a></li>
+					<li>Lidmaatschap: <a href="https://lvvp.info/" class="white" >LVVP</a></li>
+				</ul>
+			</div>
+			<div class="w-25">
+				<b>In MIjn Humm</b>
+				<ul>
+					<li><a href="" class="white">Over Natascha</a></li>
+					<li><a href="" class="white">Praktijk Visie</a></li>
+					<li>©  2021 - <span id="fyear">2021</span></li>
+				</ul>
+			</div>
+			<div class="w-25">
+				<b>Diensten</b>
+				<ul>
+					<li><a href="" class="white">Kwaliteit</a></li>
+					<li><a href="" class="white">Klachten</a></li>
+					<li><a href="/privacy" class="white">Privacy</a></li>
+				</ul>
+			</div>
+			<div class="w-25">
+				<ul style="margin-top:0;">
+					<li style="margin-bottom: 8px;">
+						<a href="/en"  class="white">🇬🇧 English Version</a>
+					</li>
+					<li>
+						<a class="button outline" href="tel:+31642833135">Bel mij nu</a>
+					</li>
+					<li>
+						<a class="button outline" href="https://wa.me/31642833135">WhatsApp mij</a>
+					</li>
+				</ul>
+			</div>
+
+			
 			<script>document.getElementById('fyear').textContent = new Date().getFullYear();</script>
 		</div>
 	</footer>
