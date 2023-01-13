@@ -77,7 +77,7 @@ nav.simple {position:fixed; top:0; background-color: none;}
 footer {background-color: var(--darkPaper); padding-top:40px; padding-bottom: 40px; margin-top: 80px;}
 footer b {font-weight: normal; opacity: 0.7;}
 footer ul {columns: 4; column-gap: 6px;}
-footer li {list-style-type: none;}
+footer li {list-style-type: none; margin: 6px 0;}
 footer .button {margin:4px 0; padding:6px 20px;}
 
 /* not used for now */
@@ -95,7 +95,6 @@ footer .button {margin:4px 0; padding:6px 20px;}
     .w-33, .w-50, .w-40, .w-60 {width:100%; padding:0;}
     .w-25 {width:50%;}
     footer ul {columns: 2;}
-    footer li {margin: 6px 0;}
 }
 @media screen and (max-width: 640px){
     #nav-more {display:block;}
