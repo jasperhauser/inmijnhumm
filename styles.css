@@ -1,7 +1,6 @@
 /* color variables */
 :root {
-    --darkBlue: #1c6f91;
-    --darkestBlue: #368bad;
+    --darkBlue: #013967;
     --paper: #fefaf7;
     --white: #fff;
     --black: #000;
@@ -54,7 +53,7 @@ nav.sticky {position:fixed; top:0; box-shadow:0px 2px 6px rgba(0, 0, 0, 0.15);}
 nav.simple {position:fixed; top:0; background-color: none;}
 #nav-content {height:48px; position: relative;}
 #logo img {position: absolute; top:6px; left:20px; }
-#logo span {position: absolute; font-size:20px; top:10px; left:66px; font-weight:bold; font-style: italic;}
+#logo span {position: absolute; font-size:20px; top:10px; left:60px; font-weight:bold; font-style: italic; color: var(--darkBlue);}
 #logo {border-bottom: none;}
 #nav-menu {position: absolute; right:20px; top:12px; margin:0;}
 #nav-menu li {display: inline; list-style: none; margin-left:8px;}
