@@ -15,7 +15,6 @@
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="favicon/favicon@16.png" sizes="16x16">
 	<link rel="shortcut icon" href="favicon/favicon@32.png" sizes="32x32">
-	<!-- <link rel="shortcut icon" href="favicon/favicon.svg" type="image/svg+xml"> -->
 	<link rel="apple-touch-icon" href="favicon/favicon@180.png">
 
 	<!-- Open Graph, Facebook -->
@@ -23,16 +22,16 @@
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="In Mijn Humm">
 	<meta property="og:url" content="https://www.inmijnhumm.nl">
-	<meta property="og:description" content="GZ psycholoog Natascha Hauser Middelberg">
+	<meta property="og:description" content="GZ psycholoog Natascha Hauser Middelberg, praktijk In Mijn Humm">
 	<meta property="og:image" content="https://www.inmijnhumm.nl/images/social-card@2x.jpg">
-	<meta property="og:image:alt" content="Natascha Hauser Middelberg">
+	<meta property="og:image:alt" content="Natascha Hauser Middelberg, In Mijn Humm">
 	
 	<!-- Twitter Image Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="In Mijn Humm — Natascha Hauser Middelberg">
-	<meta name="twitter:description" content="GZ psycholoog Natascha Hauser Middelberg">
+	<meta name="twitter:description" content="GZ psycholoog Natascha Hauser Middelberg, praktijk In Mijn Humm">
 	<meta name="twitter:image:src" content="https://www.inmijnhumm.nl/images/social-card@2x.jpg">
-	<meta name="twitter:image:alt" content="Natascha Hauser Middelberg">
+	<meta name="twitter:image:alt" content="Natascha Hauser Middelberg, In Mijn Humm">
 	<meta name="twitter:domain" content="https://www.inmijnhumm.nl">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -61,10 +60,21 @@
 			#masthead-title h2 {margin-top:0; margin-bottom:1em; font-size: 2em;}
 		#masthead-photo picture img {width:100%;}
 
-		#welkom-titel {padding: 0 40px; display: flex; flex-direction: column; justify-content: center;}
-		#aanbod-titel,  #vergoeding-titel {text-align: center; margin-bottom: 40px;}
-		
 		#welkom, #aanbod, #vergoeding {margin-top: 60px;}
+		#aanbod-titel,  #vergoeding-titel {text-align: center;}
+
+		#welkom-titel {padding: 0 40px; display: flex; flex-direction: column; justify-content: center;}
+		#welkom h2 {margin-bottom:0.5em; color:#5c7e3b;}
+		#welkom hr {margin-top: 0;}
+		#welkom-foto picture img {width: 100%;}
+		
+		#aanbod h2 {margin-bottom: 0.5em; color: #3a7277;}
+		#aanbod hr {margin-top: 0;}
+		#aanbod-english {text-align: center; opacity: 0.8; margin-top: 40px;}
+
+		#vergoeding h2 {margin-bottom: 0.5em; color: #8c5c11;}
+		#vergoeding hr {margin-top: 0;}
+		
 
 		/* mobile device breakpoints */
 		@media screen and (max-width:1024px){
@@ -75,12 +85,12 @@
 			h1 {font-size: 2.5em;}
 		}
 		@media screen and (max-width: 768px) {
-			h1 {font-size: 3.5em;}
+			h1 {font-size: 2.5em;}
 			#masthead-title {margin-bottom: 50px;}
 			
 			#welkom-titel {padding: 0; order: 1; margin-bottom: 40px;}
 			#welkom-foto {order: 2;}
-			#aanbod-titel, #vergoeding-titel {text-align: left;}
+			#aanbod-titel, #vergoeding-titel, #aanbod-english {text-align: left;}
 		}
 		@media screen and (max-width: 640px){
 		}
@@ -97,14 +107,14 @@
 	<nav id="nav">
 		<div id="nav-content" class="inset-wide">
 			<a href="#" id="logo">
-				<img src="/images/humm-logo.svg" width="36" alt="In Mijn Humm Logo, Kolibrie, Hummingbird">
+				<img src="/images/humm-logo.svg" width="36" height="36" alt="In Mijn Humm Logo, Kolibrie, Hummingbird">
 				<span>In Mijn Humm</span>
 			</a>
 			<div id="nav-menu">
 				<ul id="nav-menu-list">
-					<li><a href="/over">Over</a></li>
+					<li><a href="/over">Over Natascha</a></li>
 					<li><a href="/#aanbod">Aanbod</a></li>
-					<li><a href="/#financiering">Vergoeding</a></li>
+					<li><a href="/#vergoeding">Vergoeding</a></li>
 					<li><a href="/#aanmelden">Aanmelden</a></li>
 					<!-- <li><a href="/en">English</a></li> -->
 				</ul>
@@ -131,7 +141,7 @@
 		<div class="w-50" id="masthead-photo">
 			<picture>
 				<source srcset="images/portret-sized.webp" type="image/webp">
-				<img src="images/portret-sized.jpg" alt="Portret van Natascha Hauser Middelberg">
+				<img src="images/portret-sized.jpg" width="580" alt="Portret van Natascha Hauser Middelberg">
 			</picture>
 		</div>
 	</header>
@@ -143,48 +153,54 @@
 			<div class="w-50" id="welkom-foto">
 				<picture>
 					<source srcset="images/stoel-sized.webp" type="image/webp">
-					<img src="images/stoel-sized.jpg" style="width:100%;" alt="Natascha in gesprek">
+					<img src="images/stoel-sized.jpg" width="580" alt="Natascha in gesprek">
 				</picture>
 			</div>
 			<div class="w-50" id="welkom-titel">
 				<div>
-					<h2 style="margin-bottom:0.5em;">Welkom!</h2>
-					<hr style="margin-top: 0;">
+					<h2>Welkom!</h2>
+					<hr>
 					<p>Het is fijn dat je hier bent. Het nemen van actie om hulp te zoeken is een belangrijke stap. Ik ben hier om jou, jouw kind of jouw gezin te helpen bij problemen op het gebied van gedrag, emoties en sociale relaties.</p>
 					<p>Mijn praktijk, In Mijn Humm, is open op maandag, dinsdag en donderdag. Samen met een team van andere zelfstandige professionals, waaronder een systeemtherapeut, gezinscoach, psychiater, klinisch psycholoog en een mede-GZ-psycholoog, bieden we een breed scala aan behandelingsopties voor verschillende vragen.</p>
-					<p><a href="/over" class="button">Meer over Natascha →</a></p>
+					<p>
+						<a href="/over" class="button">Meer over Natascha →</a>
+					</p>
 				</div>
 			</div>
 		</section>
 
+		<!-- aanbod -->
 		<section id="aanbod">
 			<div id="aanbod-titel" class="inset">
-				<h2 style="margin-bottom: 0.5em;">Aanbod</h2>
-				<hr style="margin-top: 0;">
-				
-				<p><b>English</b> — I offer the intake, assessment and treatment that are conducted by myself in English. That said, most assessment materials, like questionnaires, are only available in Dutch. Often clients have someone in their network that can help with translation. If that doesn’t work out, we can schedule an appointment to fill out the questionnaires together, where I can translate for you.</p>
-
-				<p>Binnen In Mijn Humm kun je terecht voor verschillende soorten klachten, onder andere: ADHD, Autisme,	Angst en dwang, Trauma, Levensfaseproblematiek, (Verstoorde) rouwverwerking, Depressieve/somberheidsklachten, Problemen met het zelfbeeld, en Stress-klachten.</p>
-
-				<p><b><a href="/vergoeding" class="button">Meer over mijn aanbod →</a></b></p>
+				<h2>Aanbod</h2>
+				<hr>
+				<p>Binnen In Mijn Humm kun je terecht voor veel verschillende soorten klachten, onder andere: Aandacht- en concentratieproblemen, ADHD, Autisme, (Milde) stemmingsklachten, Angstklachten, Trauma, Rouw, Levensfaseproblematiek, Opvoed- en gedragsproblemen, Levensfaseproblematiek, (Verstoorde) rouwverwerking, Depressieve/somberheidsklachten, Problemen met het zelfbeeld, en Stress-klachten.</p>
 			</div>
 			<div class="flex inset-wide" style="margin-top: 20px;">
 				<div class="w-33">
 					<!-- <img src=""> -->
 					<h3>Behandeling</h3>
-					<p>Behandeling binnen In Mijn Humm kan gericht zijn op verschillende soorten klachten. Mijn ervaring en kracht ligt vooral bij stemmingsproblemen, angstklachten, trauma, rouw en ADHD. Naast dat er diverse protocollaire behandelingen bestaan, waarvan velen evidence-based zijn (hetgeen betekent dat bewezen is dat ze effectief zijn), vind ik het prettig om een behandeling vorm te geven die is afgestemd op de specifieke cliënt en diens situatie. </p>
+					<p>In Mijn Humm biedt behandelingen voor diverse soorten klachten. Mijn specialisatie ligt in het behandelen van stemmingsproblemen, angstklachten, trauma, rouw en ADHD. Naast diverse protocollaire behandelingsopties, waarvan vele wetenschappelijk bewezen effectief zijn, stem ik de behandeling af op de specifieke cliënt en hun situatie.</p>
 				</div>
 				<div class="w-33">
 					<!-- <img src=""> -->
 					<h3>Diagnostiek</h3>
-					<p>Soms is het wenselijk om eerst meer te weten te komen over de klachten, hun ontstaansgeschiedenis en welke factoren momenteel van invloed zijn. We kunnen daartoe verschillende vormen van diagnostiek inzetten, die, in overleg, worden afgestemd op de vraag. Hierbij kune je denken aan een intelligentieonderzoek, vragenlijsten, projectief materiaal en observaties, gezinsdiagnostisch onderzoek en andere opties.</p>
+					<p>Om klachten efficiënt te begrijpen en behandelen, is het belangrijk om inzicht te krijgen in hun ontstaansgeschiedenis en welke factoren er momenteel van invloed zijn. Dit kunnen we doen door verschillende diagnostische methoden in te zetten, die in overleg met de cliënt worden gekozen. Deze kunnen variëren van intelligentieonderzoek, vragenlijsten, observaties en meer.</p>
 				</div>
 				<div class="w-33">
 					<!-- <img src=""> -->
 					<h3>Samenwerkingen</h3>
-					<p>Eerder heb ik aangegeven dat ik waar nodig kan samenwerken met collega’s die op dezelfde locatie werken. Daarnaast hebben we ook een samenwerking met andere praktijken gericht op leren en coaching. Hieronder volgt een duidelijk overzicht en waar mogelijk links naar de bijbehorende websites.</p>
+					<p>Waar nodig kan samenwerken met collega's worder ingezet die op dezelfde locatie werken. Daarnaast hebben we ook samenwerkingen met andere praktijken gericht op leren en coaching. Deze samenwerkingen worden in overleg overwogen en ingezet.</p>
 				</div>
 			</div>
+			<div class="inset" id="aanbod-english">
+				<hr>
+				<p>I offer intake, assessment, and treatment in <b>English</b>. However, most assessment materials, such as questionnaires, are only available in Dutch. If needed, clients can ask someone in their network to assist with translation. If that is not possible, we can schedule an appointment where I can assist in translating the questionnaires for you.</p>
+				<!-- <p>
+					<a href="/vergoeding" class="button">Meer over mijn aanbod →</a>
+				</p> -->
+			</div>
+
 		</section>
 
 		<!-- breather -->
@@ -195,13 +211,13 @@
 			</picture>
 		</section>
 
-		<!-- financiering -->
+		<!-- vergoeding -->
 		<section id="vergoeding">
 			<div id="vergoeding-titel" class="inset">
-				<h2 style="margin-bottom: 0.5em;">Vergoeding</h2>
-				<hr style="margin-top: 0;">
+				<h2>Vergoeding</h2>
+				<hr>
 				
-				<p>In het kader van vrije artsenkeuze vergoeden zorgverzekeraars niet doorverwezen zorg wel, zij het vaak voor een gedeelte. Verzekeraars hanteren hierbij een eigen uurtarief, dat vaak afwijkt van het uurtarief van de <a href="https://www.nza.nl/" target="_blank">Nederlandse Zorgautoriteit</a>. Van dat uurtarief wordt vaak maar een bepaald percentage vergoed, afhankelijk van het soort polis dat je hebt. Daarnaast wordt in principe eerst het eigen risico aangesproken. Deze is in 2022 standaard €385,- per jaar, maar kan hoger zijn afhankelijk van jouw zorgverzekeraar.</p>
+				<p>In het kader van vrije artsenkeuze vergoeden zorgverzekeraars niet doorverwezen zorg wel, zij het vaak voor een gedeelte. Verzekeraars hanteren hierbij een eigen uurtarief, dat vaak afwijkt van het uurtarief van de <a href="https://www.nza.nl/" target="_blank">Nederlandse Zorgautoriteit</a>. Van dat uurtarief wordt vaak maar een bepaald percentage vergoed, afhankelijk van het soort polis dat je hebt. Daarnaast wordt in principe eerst het eigen risico (€385 in 2023) aangesproken.</p>
 			</div>
 			<div class="flex inset-wide" style="margin-top: 20px;">
 				<div class="w-33">
@@ -217,7 +233,7 @@
 					<p>Persoonlijk heb ik er op dit momenet voor gekozen om geen contracten te hebben met zorgverzekeraars. Voor meer informatie en achterliggende ideeën van deze keuze kun je terecht op <a href="https://contractvrijepsycholoog.nl" target="_blank">contractvrijepsycholoog.nl</a>.</p>
 				</div>
 			</div>
-			<div class="inset">
+			<div class="inset" style="text-align: center;">
 				<p><b><a href="/vergoeding" class="button">Meer over vergoeding & betaling →</a></b></p>
 			</div>
 		</section>
@@ -236,40 +252,26 @@
 
 	</main>
 
-	<footer id="footer">
-		<div class="inset-wide flex">
-			<div class="w-25">
-				<ul>
-					<li>BIG registratie: <a href="https://zoeken.bigregister.nl/bignummer/69915509225" target="_blank">69915509225</a></li>
-					<li>AGB persoonlijk: <a href="https://www.vektis.nl/agb-register/zorgverlener-94103477" target="_blank">94103477</a></li>
-					<li>AGB praktijk: <a href="https://www.vektis.nl/agb-register/onderneming-94066642" target="_blank">94066642</a></li>
-					<li>KvK nummer: <a href="https://www.kvk.nl/orderstraat/product-kiezen/?kvknummer=820640080000" target="_blank">82064008</a></li>
-					<li>Lidmaatschap: <a href="https://lvvp.info/lid/16977/" target="_blank">LVVP</a></li>
-				</ul>
-			</div>
-			<div class="w-25">
-				<ul>
-					<li><a href="/over">Over Natascha</a></li>
-					<li><a href="/over/#visie">Praktijk Visie</a></li>
-					<li><a href="/vergoeding">Vergoeding & Betaling</a></li>
-					<!-- <a href="/en">Website in English</a> -->
-				</ul>
-			</div>
-			<div class="w-25">
-				<ul>
-					<li><a href="">Kwaliteitstatuut</a></li>
-					<li><a href="">Klachten</a></li>
-					<li><a href="/privacy">Privacybeleid</a></li>
-					<li><a href="https://vp.info/voor-clienten/heeft-een-psycholog-psychotherapeut-beroepsgeheim/" target="_blank">Beroepsgeheim</a></li>
-				</ul>
-			</div>
-			<div class="w-25">
-				<ul>
-					<li>© <span id="fyear">2021</span> In mijn Humm</li>
-					<li><a href="https://goo.gl/maps/Pv5xXZk53dogzLur9">Des Presstraat 12 1075 NX, A'dam</a></li>
-					<li>Aanwezig: ma, di, en do.</li>
-				</ul>
-			</div>
+	<footer>
+		<div class="inset-wide">
+			<ul>
+				<li>BIG registratie: <a href="https://zoeken.bigregister.nl/bignummer/69915509225" target="_blank">69915509225</a></li>
+				<li>AGB persoonlijk: <a href="https://www.vektis.nl/agb-register/zorgverlener-94103477" target="_blank">94103477</a></li>
+				<li>AGB praktijk: <a href="https://www.vektis.nl/agb-register/onderneming-94066642" target="_blank">94066642</a></li>
+				<li>KvK nummer: <a href="https://www.kvk.nl/orderstraat/product-kiezen/?kvknummer=820640080000" target="_blank">82064008</a></li>
+				<li>Lidmaatschap: <a href="https://lvvp.info/lid/16977/" target="_blank">LVVP</a></li>
+				<li><a href="/over">Over Natascha</a></li>
+				<li><a href="/over/#visie">Praktijk Visie</a></li>
+				<li><a href="/vergoeding">Vergoeding & Betaling</a></li>
+				<!-- <a href="/en">Website in English</a> -->
+				<!-- <li><a href="">Kwaliteitstatuut</a></li> -->
+				<!-- <li><a href="">Klachten</a></li> -->
+				<li><a href="/privacy">Privacybeleid</a></li>
+				<!-- <li><a href="https://vp.info/voor-clienten/heeft-een-psycholog-psychotherapeut-beroepsgeheim/" target="_blank">Beroepsgeheim</a></li> -->
+				<li><a href="https://goo.gl/maps/Pv5xXZk53dogzLur9">Des Presstraat 12 1075 NX, A'dam</a></li>
+				<li>Aanwezig: ma, di, en do.</li>
+				<li>© <span id="fyear">2021</span> In mijn Humm</li>
+			</ul>
 			<script>document.getElementById('fyear').textContent = new Date().getFullYear();</script>
 		</div>
 	</footer>
