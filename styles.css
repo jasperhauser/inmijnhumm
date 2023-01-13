@@ -10,6 +10,7 @@
 body {font-family: 'Helvetica', sans-serif; font-size:16px; padding:0; margin:0; background-color:var(--paper); transition: background-color 1.5s ease-in-out;}
 
 p, ul, ol {line-height:1.6em;}
+ul {padding-left:1em;}
 footer {padding:0 20px;}
 h1, h2, h3, #logo span {font-family: 'Playfair Display', 'Georgia', serif;}
 h1 {font-size:4em; margin:0.3em 0; padding:0;}
@@ -61,7 +62,10 @@ nav.simple {position:fixed; top:0; background-color: none;}
 /* footer */
 footer {background-color: var(--black); color: var(--white); padding:40px 0; margin-top: 40px;}
 footer b {font-weight: normal; opacity: 0.7;}
-footer ul {padding-left: 0;}
+footer a {color: var(--white); border-bottom-color:rgba(255, 255, 255, 0.6);}
+footer a:hover {border-bottom-color:rgba(255, 255, 255, 0.9);}
+footer > div {padding: 0 15px !important;}
+footer ul {padding: 0 5px;}
 footer li {list-style-type: none;}
 footer .button {margin:4px 0; padding:6px 20px;}
 

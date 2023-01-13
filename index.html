@@ -61,7 +61,7 @@
 			#masthead-title h2 {margin-top:0; margin-bottom:1em; font-size: 2em;}
 		#masthead-photo picture img {width:100%;}
 
-		#welkom-titel {padding: 0 40px;}
+		#welkom-titel {padding: 0 40px; display: flex; flex-direction: column; justify-content: center;}
 		#aanbod-titel,  #vergoeding-titel {text-align: center; margin-bottom: 40px;}
 		
 		#welkom, #aanbod, #vergoeding {margin-top: 60px;}
@@ -78,7 +78,8 @@
 			h1 {font-size: 3.5em;}
 			#masthead-title {margin-bottom: 50px;}
 			
-			#welkom-titel {padding: 0;}
+			#welkom-titel {padding: 0; order: 1; margin-bottom: 40px;}
+			#welkom-foto {order: 2;}
 			#aanbod-titel, #vergoeding-titel {text-align: left;}
 		}
 		@media screen and (max-width: 640px){
@@ -117,8 +118,6 @@
 			<hr>
 			<p>Vrijgevestigd GZ-Psycholoog</p>
 			<h2>In Mijn Humm</h2>
-			
-			
 			<div>
 				<a href="mailto:natascha@inmijnhumm.nl?subject=Aanmelding via website" class="button" >Meld je vandaag aan</a>
 			</div>
@@ -135,19 +134,19 @@
 
 		<!-- welkom -->
 		<section id="welkom" class="flex inset-wide">
-			<div class="w-50">
+			<div class="w-50" id="welkom-foto">
 				<picture>
 					<source srcset="images/stoel-sized.webp" type="image/webp">
 					<img src="images/stoel-sized.jpg" style="width:100%;" alt="Natascha in gesprek">
 				</picture>
 			</div>
-			<div class="w-50" id="welkom-titel" style="display: flex; flex-direction: column; justify-content: center;">
+			<div class="w-50" id="welkom-titel">
 				<div>
 					<h2 style="margin-bottom:0.5em;">Welkom!</h2>
 					<hr style="margin-top: 0;">
-					<p>Wat goed dat je hier bent, actie ondernemen om hulp te zoeken is een hele belanrijke stap! Ik ben er om jou, jouw kind of jouw gezin te helpen bij problemen die onder andere kunnen spelen op het gebied van gedrag, emoties of sociale relaties.</p>
-					<p>Op maandag, dinsdag en donderdag werk ik in mijn eigen praktijk, In Mijn Humm. Ik werk samen met andere zelfstandig werkende collega’s, een systeemtherapeut, gezinscoach, psychiater, klinisch psycholoog, en een mede-GZ-psycholoog, om kwaliteits behandelaanbod te bieden voor een breed scala aan vragen.</p>
-					<p><a href="/over" class="button">Natascha en de praktijk →</a></p>
+					<p>Het is fijn dat je hier bent. Het nemen van actie om hulp te zoeken is een belangrijke stap. Ik ben hier om jou, jouw kind of jouw gezin te helpen bij problemen op het gebied van gedrag, emoties en sociale relaties.</p>
+					<p>Mijn praktijk, In Mijn Humm, is open op maandag, dinsdag en donderdag. Samen met een team van andere zelfstandige professionals, waaronder een systeemtherapeut, gezinscoach, psychiater, klinisch psycholoog en een mede-GZ-psycholoog, bieden we een breed scala aan behandelingsopties voor verschillende vragen.</p>
+					<p><a href="/over" class="button">Meer over Natascha →</a></p>
 				</div>
 			</div>
 		</section>
@@ -197,8 +196,6 @@
 				<hr style="margin-top: 0;">
 				
 				<p>In het kader van vrije artsenkeuze vergoeden zorgverzekeraars niet doorverwezen zorg wel, zij het vaak voor een gedeelte. Verzekeraars hanteren hierbij een eigen uurtarief, dat vaak afwijkt van het uurtarief van de <a href="https://www.nza.nl/" target="_blank">Nederlandse Zorgautoriteit</a>. Van dat uurtarief wordt vaak maar een bepaald percentage vergoed, afhankelijk van het soort polis dat je hebt. Daarnaast wordt in principe eerst het eigen risico aangesproken. Deze is in 2022 standaard €385,- per jaar, maar kan hoger zijn afhankelijk van jouw zorgverzekeraar.</p>
-				
-				<p><b><a href="/vergoeding" class="button">Meer over vergoeding & betaling →</a></b></p>
 			</div>
 			<div class="flex inset-wide" style="margin-top: 20px;">
 				<div class="w-33">
@@ -213,6 +210,9 @@
 					<h3>Volwassenen 18+</h3>
 					<p>Persoonlijk heb ik er op dit momenet voor gekozen om geen contracten te hebben met zorgverzekeraars. Voor meer informatie en achterliggende ideeën van deze keuze kun je terecht op <a href="https://contractvrijepsycholoog.nl" target="_blank">contractvrijepsycholoog.nl</a>.</p>
 				</div>
+			</div>
+			<div class="inset">
+				<p><b><a href="/vergoeding" class="button">Meer over vergoeding & betaling →</a></b></p>
 			</div>
 		</section>
 
@@ -234,34 +234,35 @@
 		<div class="inset-wide flex">
 			<div class="w-25">
 				<ul>
-					<li><a href="/over" class="white">Over Natascha</a></li>
-					<li><a href="/over/#visie" class="white">Praktijk Visie</a></li>
-					<li><a href="/vergoeding" class="white">Vergoeding & Betaling</a></li>
-					<!-- <a href="/en"  class="white">🇬🇧 English Version</a> -->
+					<li>BIG registratie: <a href="https://zoeken.bigregister.nl/bignummer/69915509225" target="_blank">69915509225</a></li>
+					<li>AGB persoonlijk: <a href="https://www.vektis.nl/agb-register/zorgverlener-94103477" target="_blank">94103477</a></li>
+					<li>AGB praktijk: <a href="https://www.vektis.nl/agb-register/onderneming-94066642" target="_blank">94066642</a></li>
+					<li>KvK nummer: <a href="https://www.kvk.nl/orderstraat/product-kiezen/?kvknummer=820640080000" target="_blank">82064008</a></li>
+					<li>Lidmaatschap: <a href="https://lvvp.info/lid/16977/" target="_blank">LVVP</a></li>
+				</ul>
+			</div>
+			<div class="w-25">
+				<ul>
+					<li><a href="/over">Over Natascha</a></li>
+					<li><a href="/over/#visie">Praktijk Visie</a></li>
+					<li><a href="/vergoeding">Vergoeding & Betaling</a></li>
+					<a href="/en">Website in English</a>
 					
 				</ul>
 			</div>
 			<div class="w-25">
 				<ul>
-					<li>BIG registratie: <a href="https://zoeken.bigregister.nl/bignummer/69915509225" target="_blank" class="white">69915509225</a></li>
-					<li>AGB persoonlijk: <a href="https://www.vektis.nl/agb-register/zorgverlener-94103477" target="_blank" class="white">94103477</a></li>
-					<li>AGB praktijk: <a href="https://www.vektis.nl/agb-register/onderneming-94066642" target="_blank" class="white">94066642</a></li>
-					<li>KvK nummer: <a href="https://www.kvk.nl/orderstraat/product-kiezen/?kvknummer=820640080000" target="_blank" class="white">82064008</a></li>
-					<li>Lidmaatschap: <a href="https://lvvp.info/lid/16977/" target="_blank" class="white" >LVVP</a></li>
+					<li><a href="">Kwaliteitstatuut</a></li>
+					<li><a href="">Klachten</a></li>
+					<li><a href="/privacy">Privacybeleid</a></li>
+					<li><a href="https://vp.info/voor-clienten/heeft-een-psycholog-psychotherapeut-beroepsgeheim/" target="_blank">Beroepsgeheim</a></li>
 				</ul>
 			</div>
 			<div class="w-25">
 				<ul>
-					<li><a href="" class="white">Kwaliteitstatuut</a></li>
-					<li><a href="" class="white">Klachten</a></li>
-					<li><a href="/privacy" class="white">Privacybeleid</a></li>
-					<li><a href="https://vp.info/voor-clienten/heeft-een-psycholog-psychotherapeut-beroepsgeheim/" target="_blank" class="white">Beroepsgeheim</a></li>
-				</ul>
-			</div>
-			<div class="w-25">
-				<ul>
-					<li>©  2021 - <span id="fyear">2021</span> In mijn Humm</li>
-					<li>Natascha Hauser Middelberg</li>
+					<li>© <span id="fyear">2021</span> In mijn Humm</li>
+					<li><a href="https://goo.gl/maps/Pv5xXZk53dogzLur9">Des Presstraat 12 1075 NX, A'dam</a></li>
+					<li>Aanwezig: ma, di, en do.</li>
 				</ul>
 			</div>
 			<script>document.getElementById('fyear').textContent = new Date().getFullYear();</script>
