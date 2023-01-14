@@ -4,11 +4,12 @@
     --paper: #fefaf7;
     --darkPaper: #e9e5d9;
     --white: #fff;
-    --black: #000;
+    --black: rgb(41, 41, 41);
+    --lightest-grey: #ccc;
 }	
 
 /* base styles */
-body {font-family: 'Helvetica', sans-serif; font-size:16px; padding:0; margin:0; background-color:var(--paper); transition: background-color 1.5s ease-in-out;}
+body {font-family:  -apple-system, 'Helvetica', sans-serif; font-size:16px; padding:0; margin:0; background-color:var(--paper); transition: background-color 1.5s ease-in-out; color: rgb(86, 86, 86);}
 
 p, ul, ol {line-height:1.6em;}
 ul {padding-left:1em;}
@@ -23,8 +24,8 @@ a:hover {border-bottom:1px solid rgba(0, 0, 0, 0.9);}
     a.white:hover {border-bottom-color:rgba(255, 255, 255, 0.9);}
 hr {height: 1px; border: none; border-top: 1px solid #000; width: 100px; margin: 10px auto; display: inline-block;}
 
-.button {padding:15px 30px; color: var(--black); border-radius: 50px; font-weight: bold; font-size: 1em; border: 1.5px solid var(--black); display: inline-block; margin:2px 2px;}
-    .button:hover {background-color: var(--black); color: var(--white);}
+button, .button {padding:15px 30px; color: var(--black); border-radius: 50px; font-weight: bold; font-size: 1em; border: 1.5px solid var(--black); display: inline-block; margin:2px 2px; background-color: unset;}
+    button:hover, .button:hover {background-color: var(--black); color: var(--white);}
     .button.outline {background-color:transparent; border: 1px solid var(--white)}
     .button.white {background-color: var(--white); color: var(--black);}
     .button.white:hover {opacity: 0.8;}
@@ -72,10 +73,28 @@ nav.simple {position:fixed; top:0; background-color: none;}
 #nav-menu.open .nav-line:first-child {transform: rotate(45deg); top: 15px;}
 #nav-menu.open .nav-line:last-child {transform: rotate(-45deg); top: 15px;}
 
+/* contact formulier */
+input, textarea {font-size: 14px; font-family: inherit; padding: 8px 12px; margin: 4px 0; border: 1px solid var(--lightest-grey); border-radius: 4px; box-sizing: border-box; -moz-box-sizing: border-box;}
+input:hover, textarea:hover, input:active, textarea:active {border-color: #000;}
+/* input:invalid {border: red solid 1px;} */
+#contact form {display: block; width: 100%; padding: 0; position: relative;}
+#contact label span {display: none;}
+#contact input, #contact textarea {width: 100%;}
+#first_name_label {display: none;} /* spam trap */
+
 /* whatsapp button */
-#whatsapp {display:block; position: fixed; bottom:15px; right: 15px; background-color: #8edd75; background-image: url(/images/whatsapp.svg); background-size: 32px; width: 56px; height: 56px; border-radius: 28px; background-repeat: no-repeat; background-position: 12px 12px; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); border:none;}
-#whatsapp:hover {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border:none; background-color: #7bca62;}
-#whatsapp span {display: none;}
+#whatsapp {display:block; position: fixed; bottom:15px; right: 15px; border:none;}
+
+#whatsapp span.w-icon:hover {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border:none; background-color: #7bca62;}
+
+#whatsapp span.w-icon {z-index: 2; display:block; background-color: #8edd75;  background-image: url(/images/whatsapp.svg); width: 56px; height: 56px; border-radius: 28px; background-repeat: no-repeat; background-size: 32px; background-position: 12px 12px; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); position: absolute; right:0px; bottom:0px; }
+
+#whatsapp:hover span.w-nudge {display: block;}
+
+#whatsapp span.w-nudge {z-index: 1; display:none; position: absolute; width: 240px; height: 52px; auto; right: 28px; bottom: 28px; background-color: #fff;  border-radius: 6px; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);}
+#whatsapp span.w-nudge-face {display: block; width: 32px; height: 32px; background-image: url(/images/profiel-foto.jpg); background-size: 32px; position: absolute; top:10px; left:10px; border-radius: 2px;}
+#whatsapp span.w-nudge-text {display: block; text-align: left; position: absolute; left: 56px; top:8px; color: #555; font-size: 0.9em;}
+
 
 /* footer */
 footer {background-color: var(--darkPaper); padding-top:40px; padding-bottom: 40px; margin-top: 80px;}
