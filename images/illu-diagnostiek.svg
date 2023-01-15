@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>illu-diagnostiek</title>
+    <g id="illu-diagnostiek" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M28.6029419,64.5091541 C29.5084585,6.85411178 59.1492722,10.1643719 115.088251,10.0477617 C138,10 159,10 170.480878,21.5177569 C181.961756,33.0355138 185.01917,103.396877 182.151177,140.48733 C180.560323,161.061113 182.961327,167.312147 165.719284,178.08811 C146.8747,189.865633 111.364697,181.494528 89.266706,180.62177 C79.4091538,180.232447 69.5156073,181.217668 59.6710262,180.579601 C56.3700549,180.365652 52.8025626,179.940909 50.0670137,178.081082 C26.1809944,161.841611 19.0263038,123.984302 28.6029419,64.5091541 Z" id="Path-4" fill="#D4F28E"></path>
+        <g id="Group" transform="translate(54.000000, 61.000000)" stroke="#FFFFFF" stroke-width="7">
+            <rect id="Rectangle" x="3.5" y="3.5" width="26" height="26" rx="11"></rect>
+            <rect id="Rectangle-Copy" x="3.5" y="49.5" width="26" height="26" rx="11"></rect>
+            <line x1="46.4339623" y1="16.5" x2="91.5660377" y2="16.5" id="Line" stroke-linecap="round"></line>
+            <line x1="46.4339623" y1="62.5" x2="91.5660377" y2="62.5" id="Line-Copy" stroke-linecap="round"></line>
+        </g>
+    </g>
+</svg>
