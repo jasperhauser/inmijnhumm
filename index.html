@@ -83,6 +83,7 @@
 		#contact-formulier {padding-right: 10px;}
 		#contact-kaart {padding-left: 10px;}
 		#contact-kaart iframe {border-radius: 6px;}
+		#contact-kaart-adres {display: none;}
 
 		footer {margin-top: 0px !important;}
 
@@ -103,7 +104,9 @@
 			.title-illu {background-size: 95px; background-position: top right; padding-top: 0px;}
 		}
 		@media screen and (max-width: 640px){}
-		@media screen and (max-width: 400px) {}
+		@media screen and (max-width: 440px) {
+			#contact-kaart-adres {display: block;}
+		}
 		@media screen and (max-width: 375px) {}
 	</style>
 </head>
@@ -259,6 +262,9 @@
 				</div>
 				<div id="contact-kaart" class="w-50">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d264.89556142273614!2d4.8599234233803!3d52.3505711510883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e3ce7a48e8dd%3A0x6c9864634c9d77f2!2sIn%20Mijn%20Humm!5e0!3m2!1sen!2snl!4v1673806437962!5m2!1sen!2snl" style="border:0; height:100%; width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<div id="contact-kaart-adres">
+						<p>Des Présstraat 12, 1075 NX, Amsterdam</p>
+					</div>
 				</div>
 			</div>
 		</section>
