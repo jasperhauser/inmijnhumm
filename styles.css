@@ -54,7 +54,7 @@ table td {padding: 8px; border-bottom:1px solid red; border-right:1px solid red;
 nav {height: 48px; width:100%; z-index: 3; position:fixed; top:-48px; transition: all 0.2s ease-in-out; background-color: var(--paper); box-shadow:rgba(0, 0, 0, 0);}
 nav.sticky {position:fixed; top:0; box-shadow:0px 2px 6px rgba(0, 0, 0, 0.15);}
 nav.simple {position:fixed; top:0; background-color: none;}
-#nav-content {height:48px; position: relative;}
+#nav-content {height:48px; position: relative; z-index: 1;}
 #logo img {position: absolute; top:6px; left:20px; }
 #logo span {position: absolute; font-size:20px; top:10px; left:60px; font-weight:bold; font-style: italic; color: var(--darkBlue);}
 #logo {border-bottom: none;}
@@ -63,20 +63,23 @@ nav.simple {position:fixed; top:0; background-color: none;}
 #nav-menu-list {position: absolute; right:20px; top:12px; margin:0;}
 #nav-menu-list li {display: inline; list-style: none; margin-left:8px;}
 
-#nav-menu.open #nav-menu-list {position: absolute; display: block; background-color: var(--paper); width: 100%; right:0; top:48px; padding:20px 0; font-size: 1.2em; box-shadow:0px 3px 4px rgba(0, 0, 0, 0.15); border-top: 1px solid rgba(0,0,0,0.1);}
-#nav-menu.open #nav-menu-list li {display: block; text-align: center; padding: 10px 0;}
+/* mobile menu */
+body.open #nav-menu-list {position: absolute; display: block; background-color: var(--paper); width: 100%; right:0; top:48px; padding:20px 0; font-size: 1.2em; box-shadow:0px 3px 4px rgba(0, 0, 0, 0.15); border-top: 1px solid rgba(0,0,0,0.1);}
+body.open #nav-menu-list li {display: block; text-align: center; padding: 10px 0;}
+#nav-menu-backdrop {position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2; display: none;}
+body.open #nav-menu-backdrop {display: block;}
 
+/* more menu */
 #nav-more {display:none; width: 32px; height: 32px; background-color: rgba(0, 0, 0, 0.05); border-radius: 6px; top: 8px; right:20px; position: absolute;}
 .nav-line {width:20px; height:2px; position: absolute; right:6px; background-color: rgba(0, 0, 0, 0.6); border-radius: 2px;}
 .nav-line:first-child {top: 11px;}
 .nav-line:last-child {top: 19px;}
-#nav-menu.open .nav-line:first-child {transform: rotate(45deg); top: 15px;}
-#nav-menu.open .nav-line:last-child {transform: rotate(-45deg); top: 15px;}
+body.open .nav-line:first-child {transform: rotate(45deg); top: 15px;}
+body.open .nav-line:last-child {transform: rotate(-45deg); top: 15px;}
 
 /* contact formulier */
 input, textarea {font-size: 14px; font-family: inherit; padding: 8px 12px; margin: 4px 0; border: 1px solid var(--lightest-grey); border-radius: 4px; box-sizing: border-box; -moz-box-sizing: border-box;}
 input:hover, textarea:hover, input:active, textarea:active {border-color: #000;}
-/* input:invalid {border: red solid 1px;} */
 #contact form {display: block; width: 100%; padding: 0; position: relative;}
 #contact label span {display: none;}
 #contact input, #contact textarea {width: 100%;}

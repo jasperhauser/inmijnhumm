@@ -1,11 +1,15 @@
 
 // nav bar more (hamburger) menu behavior
 document.getElementById("nav-more").onclick = function(){
-    document.getElementById("nav-menu").classList.toggle('open'); // let's make this things smooth
+    document.getElementById("body").classList.toggle('open'); // let's make this things smooth
 };
 // close nav when any tap/click registers on it
 document.getElementById("nav-menu-list").onclick = function(){
-    document.getElementById("nav-menu").classList.remove('open'); // let's make this things smooth
+    document.getElementById("body").classList.remove('open'); // let's make this things smooth
+};
+// close nav when any tap/click registers on it
+document.getElementById("nav-menu-backdrop").onclick = function(){
+    document.getElementById("body").classList.remove('open'); // let's make this things smooth
 };
 
 // scroll &	resize event listener
@@ -25,7 +29,7 @@ function throttle(fn, wait) {
 
 function onScroll(){
     // only show/hide nav bar when on home page
-    var home = document.getElementById("home");
+    var home = document.getElementById("body").classList.contains("home");
     if (home) {
         // nav title bar show and hide
         var mastHeight = document.getElementById("masthead-photo").offsetHeight;
@@ -34,7 +38,7 @@ function onScroll(){
             document.getElementById("nav").classList.add("sticky");
         } else if (window.pageYOffset < (mastHeight / 2)) {
             document.getElementById("nav").classList.remove("sticky");
-            // console.log("hello")
+            document.getElementById("body").classList.remove('open');
         } else if (window.pageYOffset <= 5){
             document.getElementById("nav").classList.remove("sticky");
         }
