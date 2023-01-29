@@ -35,11 +35,15 @@ function onScroll(){
         var mastHeight = document.getElementById("masthead-photo").offsetHeight;
         // add/remove sticky to show the nav
         if (window.pageYOffset >= (mastHeight / 2)) {
+            // add sticky when scrolling down
             document.getElementById("nav").classList.add("sticky");
         } else if (window.pageYOffset < (mastHeight / 2)) {
+            // remove sticky when at top of page
             document.getElementById("nav").classList.remove("sticky");
+            // close nav when scrolling up
             document.body.classList.remove('open');
         } else if (window.pageYOffset <= 5){
+            // remove sticky when at top of page
             document.getElementById("nav").classList.remove("sticky");
         }
     }
