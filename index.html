@@ -34,6 +34,19 @@
 	<meta name="twitter:image:alt" content="Natascha Hauser Middelberg, In Mijn Humm">
 	<meta name="twitter:domain" content="https://www.inmijnhumm.nl">
 
+	<!-- Language redirect -->
+	<script type="text/javascript">
+		var userLang = navigator.language || navigator.userLanguage; 
+		if (userLang.startsWith('en')) {
+			// window.location.href = '/en/';
+			console.log('english');
+		}
+		if (userLang.startsWith('nl')) {
+			// window.location.href = 'https://apple.com';
+			console.log('dutch');
+		}
+	</script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5PW9W2VFQ"></script>
     <script>
