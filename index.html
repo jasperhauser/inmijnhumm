@@ -36,23 +36,16 @@
 
 	<!-- Language redirect -->
 	<script src="/cookie.js" type="text/javascript"></script>
+
 	<script type="text/javascript">
-		// set cookie to Dutch if user language is Dutch and cookie is not set yet
+		// Redirect logic
 		if (userLang.startsWith('nl') && langCookie == null) {
 			setLang = "Dutch";
-		}
-		// set cookie to English if user language is English and cookie is not set yet
-		else if (userLang.startsWith('en') && langCookie == null) {
+		} else if (userLang.startsWith('en') && langCookie == null) {
 			setLang = "English";
 			window.location.href = '/en/';
-		}
-		// if cookie is language is dutch but cookie is english go to english
-		else if (userLang.startsWith('nl') && langCookie == "English") {
+		} else if (langCookie == "English") {
 			window.location.href = '/en/';
-		}
-		// if cookie is language is english but cookie is dutch go to dutch
-		else if (userLang.startsWith('en') && langCookie == "Dutch") {
-			window.location.href = '/';
 		}
 	</script>
 
