@@ -34,6 +34,21 @@
 	<meta name="twitter:image:alt" content="Natascha Hauser Middelberg, In Mijn Humm">
 	<meta name="twitter:domain" content="https://www.inmijnhumm.nl">
 
+	<!-- Language redirect -->
+	<script src="/cookie.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		// Redirect logic
+		if (userLang.startsWith('nl') && langCookie == null) {
+			setLang = "Dutch";
+		} else if (userLang.startsWith('en') && langCookie == null) {
+			setLang = "English";
+			window.location.href = '/en/';
+		} else if (langCookie == "English") {
+			window.location.href = '/en/';
+		}
+	</script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5PW9W2VFQ"></script>
     <script>
@@ -202,10 +217,7 @@
 			</div>
 			<div class="inset" id="aanbod-english">
 				<hr>
-				<p>I offer intake, assessment, and treatment in <b>English</b>. However, most assessment materials, such as questionnaires, are only available in Dutch. If needed, clients can ask someone in their network to assist with translation. If that is not possible, we can schedule an appointment where I can assist in translating the questionnaires for you.</p>
-				<!-- <p>
-					<a href="/vergoeding" class="button">Meer over mijn aanbod →</a>
-				</p> -->
+				<p>I offer intake, assessment, and treatment in <a href="/en" onclick="setLangCookie('English');">English</a>. However, most assessment materials, such as questionnaires, are only available in Dutch. If needed, clients can ask someone in their network to assist with translation. If that is not possible, we can schedule an appointment where I can assist in translating the questionnaires for you.</p>
 			</div>
 
 		</section>
@@ -271,13 +283,13 @@
 			</div>
 		</section>
 
-		<a id="whatsapp" href="https://wa.me/31642833135">
+		<!-- <a id="whatsapp" href="https://wa.me/31642833135">
 			<span class="w-icon"></span>
 			<span class="w-nudge">
 				<span class="w-nudge-face"></span>
 				<span class="w-nudge-text">Hi, stuur me gerust een WhatsApp!</span>
 			</span>
-		</a>
+		</a> -->
 	</main>
 
 	<footer>
@@ -291,16 +303,13 @@
 				<li><a href="/over">Over Natascha</a></li>
 				<li><a href="/over/#visie">Praktijk Visie</a></li>
 				<li><a href="/vergoeding">Vergoeding & Betaling</a></li>
-				<!-- <a href="/en">Website in English</a> -->
-				<!-- <li><a href="">Kwaliteitstatuut</a></li> -->
-				<!-- <li><a href="">Klachten</a></li> -->
 				<li><a href="/privacy">Privacybeleid</a></li>
-				<!-- <li><a href="https://vp.info/voor-clienten/heeft-een-psycholog-psychotherapeut-beroepsgeheim/" target="_blank">Beroepsgeheim</a></li> -->
-				<li>Bel mij <a href="tel:+31642833135">06 4283 3135</a></li>
-				<!-- <li><a href="https://wa.me/31642833135">WhatsApp mij</a></li> -->
-				<!-- <li><a href="https://goo.gl/maps/Pv5xXZk53dogzLur9">Des Presstraat 12 1075 NX, A'dam</a></li> -->
+				<li>Bel mij op <a href="tel:+31642833135">06 4283 3135</a></li>
+				<li><a href="https://wa.me/31642833135">WhatsApp mij</a></li>
+				<li><a href="https://goo.gl/maps/Pv5xXZk53dogzLur9">Des Presstraat 12 1075 NX, A'dam</a></li>
+				<a href="/en" onclick="setLangCookie('English');">Website in English</a>
 				<li>Aanwezig: ma, di, en do.</li>
-				<li>© <span id="fyear">2021</span> In Mijn Humm</li>
+				<li>© <span id="fyear">2024</span> In Mijn Humm</li>
 			</ul>
 			<script>document.getElementById('fyear').textContent = new Date().getFullYear();</script>
 		</div>
