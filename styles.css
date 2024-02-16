@@ -49,6 +49,7 @@ table td {padding: 8px; border-bottom:1px solid red; border-right:1px solid red;
 .w-50 {width:50%; box-sizing: border-box; position:relative;}
 .w-60 {width:60%; box-sizing: border-box; position:relative;}
 .tvc {display: flex; flex-direction: column; justify-content: center;} /* text vertical allign */
+.dhide {display: none !important;} /* not visible on desktop, only on mobile */
 
 /* nav */
 nav {height: 48px; width:100%; z-index: 3; position:fixed; top:-48px; transition: all 0.2s ease-in-out; background-color: var(--paper); box-shadow:rgba(0, 0, 0, 0);}
@@ -132,6 +133,7 @@ footer .button {margin:4px 0; padding:6px 20px;}
     /* phablet */
     .w-25 {width:100%;}
     footer ul {columns: 1;}
+    .dhide {display: block !important;} /* not visible on desktop, only on mobile */
 }
 @media screen and (max-width: 375px) {
     /* phones */
