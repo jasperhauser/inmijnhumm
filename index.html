@@ -35,10 +35,11 @@
 	<meta name="twitter:domain" content="https://www.inmijnhumm.nl">
 
 	<!-- Language redirect -->
+	
+	<!-- Load cookie functionality -->
 	<script src="/cookie.js" type="text/javascript"></script>
-
+	<!-- Language detection redirect logic -->
 	<script type="text/javascript">
-		// Redirect logic
 		if (userLang.startsWith('nl') && langCookie == null) {
 			setLang = "Dutch";
 		} else if (userLang.startsWith('en') && langCookie == null) {
@@ -64,7 +65,7 @@
 
 	<link href="/styles.css" rel="stylesheet">
 	<link href="/home.css" rel="stylesheet">
-	
+
 </head>
 <body class="home">
 	<nav id="nav">
