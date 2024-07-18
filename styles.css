@@ -13,7 +13,6 @@ body {font-family:  -apple-system, 'Helvetica', sans-serif; font-size:16px; padd
 
 p, ul, ol {line-height:1.6em;}
 ul {padding-left:1em;}
-/* footer {padding:0 20px;} */
 h1, h2, h3, #logo span {font-family: 'Playfair Display', 'Georgia', serif;}
 h1 {font-size:3.5em; margin:0.3em 0; padding:0;}
 h2	{font-size:2.5em; font-style: italic;}
@@ -88,17 +87,12 @@ input:hover, textarea:hover, input:active, textarea:active {border-color: #000;}
 
 /* whatsapp button */
 #whatsapp {display:block; position: fixed; bottom:15px; right: 15px; border:none;}
-
 #whatsapp span.w-icon:hover {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border:none; background-color: #7bca62;}
-
 #whatsapp span.w-icon {z-index: 2; display:block; background-color: #8edd75;  background-image: url(/images/whatsapp.svg); width: 56px; height: 56px; border-radius: 28px; background-repeat: no-repeat; background-size: 32px; background-position: 12px 12px; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); position: absolute; right:0px; bottom:0px; }
-
 #whatsapp:hover span.w-nudge {display: block;}
-
 #whatsapp span.w-nudge {z-index: 1; display:none; position: absolute; width: 240px; height: 52px; auto; right: 28px; bottom: 28px; background-color: #fff;  border-radius: 6px; box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);}
 #whatsapp span.w-nudge-face {display: block; width: 32px; height: 32px; background-image: url(/images/profiel-foto.jpg); background-size: 32px; position: absolute; top:10px; left:10px; border-radius: 2px;}
 #whatsapp span.w-nudge-text {display: block; text-align: left; position: absolute; left: 56px; top:8px; color: #555; font-size: 0.9em;}
-
 
 /* footer */
 footer {background-color: var(--darkPaper); padding-top:40px; padding-bottom: 40px; margin-top: 80px;}
