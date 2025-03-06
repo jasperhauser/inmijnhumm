@@ -23,7 +23,7 @@ a:hover {border-bottom:1px solid rgba(0, 0, 0, 0.9);}
     a.white:hover {border-bottom-color:rgba(255, 255, 255, 0.9);}
 hr {height: 1px; border: none; border-top: 1px solid #000; width: 100px; margin: 10px auto; display: inline-block;}
 
-button, .button {padding:15px 30px; color: var(--black); border-radius: 50px; font-weight: bold; font-size: 1em; border: 1.5px solid var(--black); display: inline-block; margin:2px 2px; background-color: unset;}
+button, .button {padding:15px 30px; color: var(--black); border-radius: 50px; font-weight: bold; font-size: 1em; border: 1.5px solid var(--black); display: inline-block; margin:2px 2px; background-color: unset; cursor:pointer;}
     button:hover, .button:hover {background-color: var(--black); color: var(--white);}
     .button.outline {background-color:transparent; border: 1px solid var(--white)}
     .button.white {background-color: var(--white); color: var(--black);}
@@ -95,10 +95,26 @@ input:hover, textarea:hover, input:active, textarea:active {border-color: #000;}
 #whatsapp span.w-nudge-text {display: block; text-align: left; position: absolute; left: 56px; top:8px; color: #555; font-size: 0.9em;}
 
 /* footer */
-footer {background-color: var(--darkPaper); padding-top:40px; padding-bottom: 40px; margin-top: 80px;}
+footer {color: #000; background-color: var(--darkPaper); padding-top:40px; padding-bottom: 40px; margin-top: 80px;}
 footer b {font-weight: normal; opacity: 0.7;}
-footer ul {columns: 4; column-gap: 6px;}
-footer li {list-style-type: none; margin: 6px 0;}
+footer ul {
+    columns: 4; 
+    column-gap: 8px;
+    column-fill: auto;
+    margin: 0;
+    padding: 0;
+    height: auto;        /* Ensure height is not constrained */
+    min-height: 0;       /* Remove any minimum height constraints */
+    position: relative;  /* Create new stacking context */
+}
+footer li {
+    list-style-type: none; 
+    margin: 8px 0;
+    break-inside: avoid;
+    display: inline-block; /* Changed from block to inline-block */
+    width: 100%;          /* Ensure full width within column */
+    vertical-align: top;
+}
 footer .button {margin:4px 0; padding:6px 20px;}
 
 /* not used for now */
