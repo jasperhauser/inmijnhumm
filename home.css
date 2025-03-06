@@ -28,6 +28,7 @@
 
 #contact {background-color: #fff; padding: 40px 0 60px 0; }
 #contact div.flex {margin-top: 40px;}
+#contact button {margin-top: 20px;}
 #contact-formulier {padding-right: 10px;}
 #contact-kaart {padding-left: 10px;}
 #contact-kaart iframe {border-radius: 6px;}
