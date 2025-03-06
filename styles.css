@@ -9,7 +9,12 @@
 }	
 
 /* base styles */
-body {font-family:  -apple-system, 'Helvetica', sans-serif; font-size:16px; padding:0; margin:0; background-color:var(--paper);}
+body {font-family:  -apple-system, 'Helvetica', sans-serif; font-size:16px; padding:0; margin:0; background-color:var(--paper); }
+
+/* Add scroll margin for anchor links */
+:target {
+    scroll-margin-top: 48px;
+}
 
 p, ul, ol {
     line-height:1.8em;
