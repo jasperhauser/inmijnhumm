@@ -64,7 +64,6 @@ table td {padding: 8px; border-bottom:1px solid red; border-right:1px solid red;
 .w-50 {width:50%; box-sizing: border-box; position:relative;}
 .w-60 {width:60%; box-sizing: border-box; position:relative;}
 .tvc {display: flex; flex-direction: column; justify-content: center;} /* text vertical allign */
-.dhide {display: none !important;} /* not visible on desktop, only on mobile */
 
 /* nav */
 nav {height: 48px; width:100%; z-index: 3; position:fixed; top:-48px; transition: all 0.2s ease-in-out; background-color: var(--paper); box-shadow:rgba(0, 0, 0, 0);}
@@ -94,13 +93,6 @@ nav.sticky {position:fixed; top:0; box-shadow:0px 2px 6px rgba(0, 0, 0, 0.15);}
                 opacity 0.2s ease-in-out;
 }
 #nav-menu-list li a:hover::after {width: 100%; opacity: 1;}
-
-
-/* mobile menu */
-body.open #nav-menu-list {position: absolute; display: block; background-color: var(--paper); width: 100%; right:0; top:48px; padding:20px 0; font-size: 1.2em; box-shadow:0px 3px 4px rgba(0, 0, 0, 0.15); border-top: 1px solid rgba(0,0,0,0.1);}
-body.open #nav-menu-list li {display: block; text-align: center; padding: 10px 0;}
-#nav-menu-backdrop {position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2; display: none;}
-body.open #nav-menu-backdrop {display: block;}
 
 /* more menu */
 #nav-more {display:none; width: 32px; height: 32px; background-color: rgba(0, 0, 0, 0.05); border-radius: 6px; top: 8px; right:20px; position: absolute;}
@@ -164,6 +156,9 @@ footer .button {margin:4px 0; padding:6px 20px;}
         button:hover, .button:hover {background-color: var(--white); color: var(--black); border: 1.5px solid var(--white);}
 
     #nav-menu-list li a::after {background-color: var(--white);}
+    #nav-more {background-color: rgba(255, 255, 255, 0.1);}
+        #nav-more .nav-line {background-color: var(--white);}
+
     footer {background-color: var(--black); color: var(--white);}
 }
 
@@ -183,13 +178,21 @@ footer .button {margin:4px 0; padding:6px 20px;}
 @media screen and (max-width: 640px){
     #nav-more {display:block;}
     #nav-menu-list {display: none;}
+
+    /* mobile menu */
+    body.open #nav-menu-list {position: absolute; display: block; background-color: var(--paper); width: 100%; right:0; top:48px; padding:20px 0; font-size: 1.2em; box-shadow:0px 3px 4px rgba(0, 0, 0, 0.15); border-top: 1px solid rgba(0,0,0,0.1);}
+    body.open #nav-menu-list li {display: block; text-align: center; padding: 10px 0;}
+    body.open #nav-menu-list li a {display: block;}
+        body.open #nav-menu-list li a::after {display: none;}
+    #nav-menu-backdrop {position: fixed; top:0; left:0; width:100%; height:100%; background-color: rgba(0, 0, 0, 0.5); z-index: 2; display: none;}
+    body.open #nav-menu-backdrop {display: block;}
+
     input, textarea {font-size: 16px;} /* should prevent zooming in mobile safari */
 }
 @media screen and (max-width: 400px) {
     /* phablet */
     .w-25 {width:100%;}
     footer ul {columns: 1;}
-    .dhide {display: block !important;} /* not visible on desktop, only on mobile */
 }
 @media screen and (max-width: 375px) {
     /* phones */
