@@ -1,4 +1,3 @@
-
 // nav bar more (hamburger) menu behavior
 document.getElementById("nav-more").onclick = function(){
     document.body.classList.toggle('open'); // let's make this things smooth
@@ -15,6 +14,8 @@ document.getElementById("nav-menu-backdrop").onclick = function(){
 // scroll &	resize event listener
 window.addEventListener('resize', throttle(onScroll, 50));
 window.addEventListener('scroll', throttle(onScroll, 50));
+// check scroll position on page load
+window.addEventListener('load', onScroll);
 
 // let's make the events not eat all the resources
 function throttle(fn, wait) {
