@@ -69,8 +69,8 @@ table td {padding: 8px; border-bottom:1px solid red; border-right:1px solid red;
 nav {height: 48px; width:100%; z-index: 3; position:fixed; top:-48px; transition: all 0.2s ease-in-out; background-color: var(--paper); box-shadow:rgba(0, 0, 0, 0);}
 nav.sticky {position:fixed; top:0; box-shadow:0px 2px 6px rgba(0, 0, 0, 0.15);}
 #nav-content {height:48px; position: relative; z-index: 1;}
-#logo img {position: absolute; top:6px; left:20px; }
-#logo span {position: absolute; font-size:20px; top:10px; left:60px; font-weight:bold; font-style: italic; color: var(--darkBlue);}
+#nav-logo {display: block; position: absolute; top:6px; left:20px; width: 36px; height: 36px; background-image: url(/images/humm-logo.svg); background-size: 36px; background-position: center; background-repeat: no-repeat;}
+#nav-logo-text {position: absolute; font-size:20px; top:10px; left:60px; font-weight:bold; font-style: italic; color: var(--darkBlue);}
 #logo {border-bottom: none;}
 
 /* menu */
@@ -146,7 +146,7 @@ footer .button {margin:4px 0; padding:6px 20px;}
 @media (prefers-color-scheme: dark) {
     :root {
         --paper: #1d1b1a;
-        --darkBlue: #559cd6;
+        --darkBlue: #83c6bb;
     }
     body {color:#fff}
     hr {border-color: rgba(255, 255, 255, 0.4);}
@@ -154,7 +154,10 @@ footer .button {margin:4px 0; padding:6px 20px;}
         a:hover {border-color: var(--white);}
     button, .button {background-color: unset; color: var(--white); border-color: var(--white);}
         button:hover, .button:hover {background-color: var(--white); color: var(--black); border: 1.5px solid var(--white);}
+    input, textarea {background-color: rgba(255,255,255,0.05); color: #fff; border-color: rgba(255,255,255,0.1); transition: border-color 0.2s ease-in-out;}
+        input:hover, textarea:hover {border-color: rgba(255,255,255,0.6);}
 
+    #nav-logo {background-image: url(/images/humm-logo-donker.svg);}
     #nav-menu-list li a::after {background-color: var(--white);}
     #nav-more {background-color: rgba(255, 255, 255, 0.1);}
         #nav-more .nav-line {background-color: var(--white);}

@@ -1,7 +1,7 @@
 /* header */
 #masthead {margin-top: 40px;}
 #masthead-title {text-align: center; display: flex; flex-direction: column; justify-content: center; padding: 0 20px;}
-    #masthead-title img {margin:0 auto;}	
+    #masthead-logo {margin:0 auto; width: 120px; height: 120px; background-image: url(/images/humm-logo.svg); background-size: 120px; background-position: center; background-repeat: no-repeat;}
     #masthead-title h1 {color: var(--darkBlue);}
     #masthead-title hr {margin-bottom: 2em;}
     #masthead-title p {margin:0;}
@@ -31,10 +31,16 @@
 #contact button {margin-top: 20px;}
 #contact-formulier {padding-right: 10px;}
 #contact-kaart {padding-left: 10px;}
-#contact-kaart iframe {border-radius: 6px;}
+#contact-kaart iframe {border-radius: 6px; background-color: rgba(125,125,125,0.1);}
 #contact-kaart-adres {display: none;}
 
 footer {margin-top: 0px !important;}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+    #masthead-logo {background-image: url(/images/humm-logo-donker.svg);}
+    #contact {background-color: #66666612;}
+}
 
 /* mobile device breakpoints */
 @media screen and (max-width:960px){
