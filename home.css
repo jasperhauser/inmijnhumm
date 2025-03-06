@@ -21,7 +21,7 @@
 #aanbod-english {text-align: center; margin-top: 40px;}
 
 /* illustaties */
-.title-illu::before {content: ''; display: block; position: absolute; right: 0; top: 0; width: 120px; height: 120px; background-repeat: no-repeat; background-size: 120px; background-position: top right; padding-top: 10px;}
+.title-illu::before {content: ''; z-index: -10; display: block; position: absolute; right: 0; top: 0; width: 120px; height: 120px; background-repeat: no-repeat; background-size: 120px; background-position: top right; padding-top: 10px;}
 #illu-samenwerking::before {background-image: url(/images/illu-samenwerking.svg);}
 #illu-diagnostiek::before {background-image: url(/images/illu-diagnostiek.svg);}
 #illu-behandeling::before {background-image: url(/images/illu-behandeling.svg);}
