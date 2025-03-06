@@ -37,7 +37,9 @@ footer {margin-top: 0px !important;}
 
 /* mobile device breakpoints */
 /* @media screen and (max-width:1024px){} */
-/* @media screen and (max-width:840px){} */
+@media screen and (max-width:960px){
+    #masthead-title h1 {font-size: 2.5em;}
+}
 
 @media screen and (max-width: 768px) {
     #masthead-title {margin-bottom: 50px;}
@@ -57,6 +59,8 @@ footer {margin-top: 0px !important;}
 
 @media screen and (max-width: 440px) {
     #contact-kaart-adres {display: block;}
+    #masthead-title h1 {font-size: 2.2em;}
+    #masthead-title h2 {font-size: 2em;}
 }
 
 /* @media screen and (max-width: 375px) {} */
