@@ -20,7 +20,11 @@
 #aanbod hr {margin-top: 0;}
 #aanbod-english {text-align: center; margin-top: 40px;}
 
-.title-illu {background-repeat: no-repeat; background-size: 120px; background-position: top right; padding-top: 10px;}
+/* illustaties */
+.title-illu::before {content: ''; display: block; position: absolute; right: 0; top: 0; width: 120px; height: 120px; background-repeat: no-repeat; background-size: 120px; background-position: top right; padding-top: 10px;}
+#illu-samenwerking::before {background-image: url(/images/illu-samenwerking.svg);}
+#illu-diagnostiek::before {background-image: url(/images/illu-diagnostiek.svg);}
+#illu-behandeling::before {background-image: url(/images/illu-behandeling.svg);}
 
 #vergoeding h2 {margin-bottom: 0.5em; color: #8c5c11;}
 #vergoeding hr {margin-top: 0;}
@@ -39,6 +43,7 @@ footer {margin-top: 0px !important;}
 /* dark mode */
 @media (prefers-color-scheme: dark) {
     #masthead-logo {background-image: url(/images/humm-logo-donker.svg);}
+    .title-illu::before {opacity: 0.2;} 
     #contact {background-color: #66666612;}
 }
 
