@@ -9,15 +9,24 @@
 }	
 
 /* base styles */
-body {font-family:  -apple-system, 'Helvetica', sans-serif; font-size:16px; padding:0; margin:0; background-color:var(--paper); transition: background-color 1.5s ease-in-out; color: rgb(86, 86, 86);}
+body {font-family:  -apple-system, 'Helvetica', sans-serif; font-size:16px; padding:0; margin:0; background-color:var(--paper);}
 
-p, ul, ol {line-height:1.6em;}
+p, ul, ol {
+    line-height:1.8em;
+}
 ul {padding-left:1em;}
 h1, h2, h3, #logo span {font-family: 'Playfair Display', 'Georgia', serif;}
 h1 {font-size:3.5em; margin:0.3em 0; padding:0;}
 h2	{font-size:2.5em; font-style: italic;}
 h3	{font-size:1.75em; margin-bottom: 0.5em;}
-a {color:#000; text-decoration: none; border-bottom:1px solid rgba(0, 0, 0, 0.2); transition: all .2s ease-in-out;}
+a {
+    color:#000; 
+    text-decoration: none; 
+    border-bottom:1px solid rgba(0, 0, 0, 0.2); 
+    transition: color 0.2s ease-in-out,
+                border-color 0.2s ease-in-out,
+                background-color 0.2s ease-in-out;
+}
     a.white {color: var(--white); border-bottom-color:rgba(255, 255, 255, 0.6);}
 a:hover {border-bottom:1px solid rgba(0, 0, 0, 0.9);}
     a.white:hover {border-bottom-color:rgba(255, 255, 255, 0.9);}
@@ -28,6 +37,8 @@ button, .button {padding:15px 30px; color: var(--black); border-radius: 50px; fo
     .button.outline {background-color:transparent; border: 1px solid var(--white)}
     .button.white {background-color: var(--white); color: var(--black);}
     .button.white:hover {opacity: 0.8;}
+
+picture img {border-radius: 10px;}
 
 table {border-spacing: 0; border:1px solid red}
 table th {padding: 8px; background-color: rgba(0, 0, 0, 0.05); border-bottom:1px solid red; border-right:1px solid red;}
