@@ -6,7 +6,7 @@
     #masthead-title hr {margin-bottom: 2em;}
     #masthead-title p {margin:0;}
     #masthead-title h2 {margin-top:0; margin-bottom:1em; font-size: 2em;}
-#masthead-photo picture img {width:100%;}
+picture img {width:100%; height: auto;}
 
 #welkom, #aanbod, #vergoeding, #contact {margin-top: 60px;}
 .section-start {text-align: center;}
@@ -14,7 +14,6 @@
 #welkom-titel {padding: 0 40px; display: flex; flex-direction: column; justify-content: center;}
 #welkom h2 {margin-bottom:0.5em; color:#5c7e3b;}
 #welkom hr {margin-top: 0;}
-#welkom-foto picture img {width: 100%;}
 
 #aanbod h2 {margin-bottom: 0.5em; color: #3a7277;}
 #aanbod hr {margin-top: 0;}
@@ -43,7 +42,8 @@ footer {margin-top: 0px !important;}
 /* dark mode */
 @media (prefers-color-scheme: dark) {
     #masthead-logo {background-image: url(/images/humm-logo-donker.svg);}
-    .title-illu::before {opacity: 0.2;} 
+    .title-illu::before {opacity: 0.2;}
+    #vergoeding h2 {color: #b47614;}
     #contact {background-color: #66666612;}
 }
 
@@ -65,7 +65,8 @@ footer {margin-top: 0px !important;}
     .title-illu {background-size: 95px; background-position: top right; padding-top: 0px;}
 }
 @media screen and (max-width: 440px) {
-    #contact-kaart-adres {display: block;}
     #masthead-title h1 {font-size: 2.2em;}
     #masthead-title h2 {font-size: 2em;}
+    #welkom, #aanbod, #vergoeding, #contact {margin-top: 30px;}
+    #contact-kaart-adres {display: block;}
 }
