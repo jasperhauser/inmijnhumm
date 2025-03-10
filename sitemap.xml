@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Dutch Homepage -->
+    <url>
+        <loc>https://inmijnhumm.nl/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/"/>
+    </url>
+
+    <!-- English Homepage -->
+    <url>
+        <loc>https://inmijnhumm.nl/en/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/"/>
+    </url>
+
+    <!-- Dutch About Page -->
+    <url>
+        <loc>https://inmijnhumm.nl/over</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/about/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/over"/>
+    </url>
+
+    <!-- English About Page -->
+    <url>
+        <loc>https://inmijnhumm.nl/en/about/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/about/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/over"/>
+    </url>
+
+    <!-- Dutch Reimbursement Page -->
+    <url>
+        <loc>https://inmijnhumm.nl/vergoeding</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/reimbursement/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/vergoeding"/>
+    </url>
+
+    <!-- English Reimbursement Page -->
+    <url>
+        <loc>https://inmijnhumm.nl/en/reimbursement/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/reimbursement/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/vergoeding"/>
+    </url>
+
+    <!-- Dutch Privacy Policy -->
+    <url>
+        <loc>https://inmijnhumm.nl/privacy</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/privacy"/>
+    </url>
+
+    <!-- English Privacy Policy -->
+    <url>
+        <loc>https://inmijnhumm.nl/en/privacy/</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/privacy/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/privacy"/>
+    </url>
+
+    <!-- Dutch Registration Page -->
+    <url>
+        <loc>https://inmijnhumm.nl/aanmelden</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/register/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/aanmelden"/>
+    </url>
+
+    <!-- English Registration Page -->
+    <url>
+        <loc>https://inmijnhumm.nl/en/register/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://inmijnhumm.nl/en/register/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://inmijnhumm.nl/aanmelden"/>
+    </url>
+
+</urlset> 
