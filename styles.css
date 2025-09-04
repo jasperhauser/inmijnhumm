@@ -4,10 +4,13 @@
     --paper: #fefaf7;
     --darkPaper: #e9e5d9;
     --white: #fff;
+    --light-grey: rgba(190, 190, 190, 1);
     --black: rgb(41, 41, 41);
+    --dark-grey: rgba(90, 90, 90, 1);
     --lightest-grey: #ccc;
     --overlay-color: rgba(0, 0, 0, 0.5);
     --overlay-color-light: rgba(0, 0, 0, 0.3);
+    --transparent: rgba(0, 0, 0, 0);
 }	
 
 /* base styles */
@@ -144,8 +147,7 @@ input:hover, textarea:hover, input:active, textarea:active {border-color: #000;}
 #whatsapp span.w-nudge-text {display: block; text-align: left; position: absolute; left: 56px; top:8px; color: #555; font-size: 0.9em;}
 
 /* footer */
-footer {color: #000; background-color: var(--darkPaper); padding-top:40px; padding-bottom: 40px; margin-top: 80px;}
-footer b {font-weight: normal; opacity: 0.7;}
+footer {color: var(--dark-grey); background-color: var(--darkPaper); padding-top:40px; padding-bottom: 40px; margin-top: 80px; font-size: 0.8em;}
 footer ul {
     columns: 4; 
     column-gap: 8px;
@@ -163,7 +165,7 @@ footer li {
     width: 100%;          /* Ensure full width within column */
     vertical-align: top;
 }
-footer .button {margin:4px 0; padding:6px 20px;}
+footer ul li a {border-bottom-color:;}
 
 /* not used for now */
 @media (prefers-color-scheme: dark) {
@@ -185,7 +187,7 @@ footer .button {margin:4px 0; padding:6px 20px;}
     #nav-more {background-color: rgba(255, 255, 255, 0.1);}
         #nav-more .nav-line {background-color: var(--white);}
 
-    footer {background-color: var(--black); color: var(--white);}
+    footer {background-color: var(--black); color: var(--light-grey);}
 }
 
 /* mobile device breakpoints */
