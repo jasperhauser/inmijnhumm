@@ -1,0 +1,28 @@
+# Site settings
+title: In Mijn Humm
+description: GZ-Psycholoog Amsterdam Zuid
+url: https://www.inmijnhumm.nl
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: nl
+  - scope:
+      path: "en"
+    values:
+      lang: en

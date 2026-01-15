@@ -1,0 +1,23 @@
+<nav id="nav"{% unless page.body_class == 'home' %} class="sticky"{% endunless %}>
+	<div id="nav-content" class="inset-wide">
+		<a href="/" id="logo">
+			<span id="nav-logo"{% if page.layout == 'home' %} role="img" aria-label="In Mijn Humm logo"{% endif %}></span>
+			<span id="nav-logo-text">In Mijn Humm</span>
+		</a>
+		<div id="nav-menu">
+			<ul id="nav-menu-list">
+				<li><a href="/over">Over Natascha</a></li>
+				<li><a href="/#aanbod">Diensten</a></li>
+				<li><a href="/#vergoeding">Vergoeding</a></li>
+				<li><a href="/#contact">Contact</a></li>
+				<li><a href="/aanmelden">Aanmelden</a></li>
+				<li><a href="{{ page.lang_switch | default: '/en/' }}" onclick="setLangCookie('Dutch');">🇬🇧 English</a></li>
+			</ul>
+			<div id="nav-more">
+				<div class="nav-line"></div>
+				<div class="nav-line"></div>
+			</div>
+		</div>
+	</div>
+</nav>
+<div id="nav-menu-backdrop"></div>

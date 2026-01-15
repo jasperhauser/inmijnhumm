@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ page.lang | default: 'nl' }}">
+<head>
+	{% include head.html %}
+</head>
+<body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
+	{% if page.lang == 'en' %}
+		{% include nav-en.html %}
+	{% else %}
+		{% include nav-nl.html %}
+	{% endif %}
+
+	{{ content }}
+
+	{% if page.lang == 'en' %}
+		{% include footer-en.html %}
+	{% else %}
+		{% include footer-nl.html %}
+	{% endif %}
+
+	<script async src="/nav.js"></script>
+</body>
+</html>

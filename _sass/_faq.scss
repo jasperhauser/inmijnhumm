@@ -1,0 +1,68 @@
+// FAQ Accordion
+#faq {
+    margin-top: 60px;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.faq-list {
+    margin-top: 60px !important;
+    padding-bottom: 60px !important;
+
+    details {
+        border-bottom: 1px solid var(--lightest-grey);
+
+        &:first-child {
+            border-top: 1px solid var(--lightest-grey);
+        }
+
+        &[open] summary::after {
+            content: '−';
+        }
+
+        > p,
+        > table {
+            padding: 0 0 16px 0;
+            margin: 0;
+        }
+
+        > p:first-of-type {
+            padding-top: 0;
+        }
+    }
+
+    summary {
+        padding: 16px 40px 16px 0;
+        font-weight: 600;
+        font-size: 1.1em;
+        cursor: pointer;
+        list-style: none;
+        position: relative;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            font-weight: 300;
+            color: var(--dark-grey);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        &:hover {
+            color: var(--darkBlue);
+        }
+    }
+
+    table {
+        margin-bottom: 8px;
+    }
+}

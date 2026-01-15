@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+<title>{{ page.title }}</title>
+
+{% if page.canonical %}
+<!-- Language alternates -->
+<link rel="canonical" href="{{ page.canonical }}" />
+<link rel="alternate" hreflang="nl" href="{{ page.hreflang_nl }}" />
+<link rel="alternate" hreflang="en" href="{{ page.hreflang_en }}" />
+<link rel="alternate" hreflang="x-default" href="{{ page.hreflang_en }}" />
+{% endif %}
+
+<!-- Mobile viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+<!-- Search engines -->
+<meta name="referrer" content="unsafe-url">
+<meta name="description" content="{{ page.description }}">
+<meta name="keywords" content="{{ page.keywords | default: 'GZ psycholoog, Natascha Hauser Middelberg, In Mijn Humm, behandeling, angst, trauma, ADHD, rouw, kinderen, volwassenen, Amsterdam' }}">
+
+{% if page.schema %}
+{% include schema-business.html %}
+{% endif %}
+
+<!-- Sitemap -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon/favicon@16.png" sizes="16x16">
+<link rel="shortcut icon" href="/favicon/favicon@32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/favicon/favicon@180.png">
+
+<!-- Open Graph, Facebook -->
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="In Mijn Humm">
+<meta property="og:url" content="{{ site.url }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:image" content="{{ site.url }}/images/social-card@2x.jpg">
+<meta property="og:image:alt" content="Natascha Hauser Middelberg, In Mijn Humm">
+
+<!-- Twitter Image Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image:src" content="{{ site.url }}/images/social-card@2x.jpg">
+<meta name="twitter:image:alt" content="Natascha Hauser Middelberg, In Mijn Humm">
+<meta name="twitter:domain" content="{{ site.url }}">
+
+<script src="/cookie.js" type="text/javascript"></script>
+
+{% if page.lang_redirect %}
+<!-- Language detection redirect logic -->
+<script type="text/javascript">
+	if (userLang.startsWith('nl') && langCookie == null) {
+		setLang = "Dutch";
+	} else if (userLang.startsWith('en') && langCookie == null) {
+		setLang = "English";
+		window.location.href = '/en/';
+	} else if (langCookie == "English") {
+		window.location.href = '/en/';
+	}
+</script>
+{% endif %}
+
+{% include analytics.html %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
+<link href="/css/main.css" rel="stylesheet">
+{% if page.extra_css %}
+<link href="{{ page.extra_css }}" rel="stylesheet">
+{% endif %}
+{% if page.inline_css %}
+<style>
+{{ page.inline_css }}
+</style>
+{% endif %}

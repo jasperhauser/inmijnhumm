@@ -1,0 +1,95 @@
+// Dark mode styles
+@media (prefers-color-scheme: dark) {
+    :root {
+        --paper: #1d1b1a;
+        --darkBlue: #83c6bb;
+    }
+
+    body {
+        color: #fff;
+    }
+
+    hr {
+        border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    a {
+        color: var(--white);
+        border-color: rgba(255, 255, 255, 0.4);
+
+        &:hover {
+            border-color: var(--white);
+        }
+    }
+
+    button, .button {
+        background-color: unset;
+        color: var(--white);
+        border-color: var(--white);
+
+        &:hover {
+            background-color: var(--white);
+            color: var(--black);
+            border: 1.5px solid var(--white);
+        }
+    }
+
+    input, textarea {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.1);
+        transition: border-color 0.2s ease-in-out;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    // Nav dark mode
+    #nav-logo {
+        background-image: url(/images/humm-logo-donker.svg);
+    }
+
+    #nav-menu-list li a::after {
+        background-color: var(--white);
+    }
+
+    #nav-more {
+        background-color: rgba(255, 255, 255, 0.1);
+
+        .nav-line {
+            background-color: var(--white);
+        }
+    }
+
+    // Footer dark mode
+    footer {
+        background-color: var(--black);
+        color: var(--light-grey);
+    }
+
+    // FAQ dark mode
+    .faq-list {
+        details {
+            border-color: rgba(255, 255, 255, 0.2);
+
+            &:first-child {
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        summary {
+            &::after {
+                color: var(--light-grey);
+            }
+
+            &:hover {
+                color: var(--darkBlue);
+            }
+        }
+    }
+
+    table td {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}

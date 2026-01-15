@@ -1,0 +1,70 @@
+// Layout utilities
+.inset, .inset-wide, .inset-narrow {
+    margin: auto auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.inset {
+    max-width: 950px;
+}
+
+.inset-wide {
+    max-width: 1200px;
+}
+
+.inset-narrow {
+    max-width: 700px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.w-25 {
+    width: 25%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.w-33 {
+    width: 33.33%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 20px;
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.w-40 {
+    width: 40%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.w-50 {
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.w-60 {
+    width: 60%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.tvc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -1,0 +1,14 @@
+// Color variables (using CSS custom properties for runtime theming)
+:root {
+    --darkBlue: #013967;
+    --paper: #fefaf7;
+    --darkPaper: #e9e5d9;
+    --white: #fff;
+    --light-grey: rgba(190, 190, 190, 1);
+    --black: rgb(41, 41, 41);
+    --dark-grey: rgba(90, 90, 90, 1);
+    --lightest-grey: #ccc;
+    --overlay-color: rgba(0, 0, 0, 0.5);
+    --overlay-color-light: rgba(0, 0, 0, 0.3);
+    --transparent: rgba(0, 0, 0, 0);
+}

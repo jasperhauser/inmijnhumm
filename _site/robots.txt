@@ -1,0 +1,49 @@
+# robots.txt for inmijnhumm.nl
+# Documentation: https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt
+
+# Global rules
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /over/
+Allow: /vergoeding/
+Allow: /privacy/
+Allow: /aanmelden/
+
+# Block access to scripts, styles and utility files
+Disallow: /cookie.js
+Disallow: /nav.js
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*?*
+
+# Block potential sensitive areas
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl-delay for all bots (in seconds)
+Crawl-delay: 10
+
+# Special rules for specific bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# Media files - allow Google Images to index your images
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: *.jpg$
+Allow: *.jpeg$
+Allow: *.gif$
+Allow: *.png$
+Allow: *.webp$
+
+# Sitemaps
+Sitemap: https://inmijnhumm.nl/sitemap.xml 
