@@ -72,10 +72,60 @@ button, .button {padding:12px 24px; color: var(--black); border-radius: 50px; fo
 
 picture img {border-radius: 10px;}
 
-table {border-spacing: 0; border:1px solid red}
-table th {padding: 8px; background-color: rgba(0, 0, 0, 0.05); border-bottom:1px solid red; border-right:1px solid red;}
-table td {padding: 8px; border-bottom:1px solid red; border-right:1px solid red;}
+table {border-spacing: 0; border-collapse: collapse;}
+table th {padding: 8px; background-color: rgba(0, 0, 0, 0.05); border-bottom:1px solid var(--lightest-grey);}
+table td {padding: 8px 16px 8px 0; border-bottom:1px solid var(--lightest-grey);}
     table tr:last-child td {border-bottom:none;}
+
+/* FAQ */
+#faq {margin-top: 60px;}
+#faq h2 {text-align: center;}
+.faq-list {margin-top: 60px !important; padding-bottom: 60px !important;}
+.faq-list details {
+    border-bottom: 1px solid var(--lightest-grey);
+}
+.faq-list details:first-child {
+    border-top: 1px solid var(--lightest-grey);
+}
+.faq-list summary {
+    padding: 16px 40px 16px 0;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+.faq-list summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    font-weight: 300;
+    color: var(--dark-grey);
+    transition: transform 0.2s ease-in-out;
+}
+.faq-list details[open] summary::after {
+    content: '−';
+}
+.faq-list summary:hover {
+    color: var(--darkBlue);
+}
+.faq-list details > p,
+.faq-list details > table {
+    padding: 0 0 16px 0;
+    margin: 0;
+}
+.faq-list details > p:first-of-type {
+    padding-top: 0;
+}
+.faq-list table {
+    margin-bottom: 8px;
+}
 
 /* layout */
 .inset, .inset-wide, .inset-narrow {margin:auto auto; padding-left:20px; padding-right:20px; box-sizing: border-box;}
@@ -188,6 +238,12 @@ footer li {
         #nav-more .nav-line {background-color: var(--white);}
 
     footer {background-color: var(--black); color: var(--light-grey);}
+
+    .faq-list details {border-color: rgba(255, 255, 255, 0.2);}
+    .faq-list details:first-child {border-color: rgba(255, 255, 255, 0.2);}
+    .faq-list summary::after {color: var(--light-grey);}
+    .faq-list summary:hover {color: var(--darkBlue);}
+    table td {border-color: rgba(255, 255, 255, 0.2);}
 }
 
 /* mobile device breakpoints */

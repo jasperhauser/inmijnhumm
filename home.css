@@ -56,7 +56,7 @@ footer {margin-top: 0px !important;}
     
     #welkom-titel {padding: 0; order: 1; margin-bottom: 40px;}
     #welkom-foto {order: 2;}
-    #aanbod-titel, #vergoeding-titel, #aanbod-english, #vergoeding-footer, .section-start {text-align: left;}
+    #aanbod-titel, #vergoeding-titel, #aanbod-english, #vergoeding-footer, .section-start, #faq h2 {text-align: left;}
 
     #contact-formulier {padding-right: 0px;}
     #contact-kaart {padding-left: 0px;}
