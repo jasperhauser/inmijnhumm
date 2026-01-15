@@ -165,7 +165,7 @@ footer li {
     width: 100%;          /* Ensure full width within column */
     vertical-align: top;
 }
-footer ul li a {border-bottom-color:;}
+.LVVP-logo {width: 24px; height: 24px; display: inline-block; vertical-align: middle;}
 
 /* not used for now */
 @media (prefers-color-scheme: dark) {
